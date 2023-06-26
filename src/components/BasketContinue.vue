@@ -39,4 +39,12 @@ export default {
     }
 }
 
+@media(max-width: 1023px){
+    .basket{
+        &-continue{
+            align-self: flex-end;
+            margin-right: 20px;
+        }  
+    }  
+}
 </style>

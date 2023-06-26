@@ -64,6 +64,7 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
     }
     &-img{
         width: 150px;
@@ -81,7 +82,15 @@ export default {
         font-weight: 800;
     }
 }
-.price{
 
+@media(max-width:1023px){
+    .box{
+        width: auto;
+    }
+    .cart{
+        &-wrapper{
+            column-gap: 15px;
+        }
+    }
 }
 </style>

@@ -46,5 +46,12 @@ export default {
     display: flex;
     align-items: center;
     gap: 30px;
+    justify-content: center;
+}
+
+@media(max-width: 1023px){
+    .basket{
+        flex-direction: column-reverse;
+    }
 }
 </style>
