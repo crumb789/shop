@@ -10,18 +10,22 @@
     </nav>
     <router-view/>
     <basket-comp></basket-comp>
+
+    <footer-comp></footer-comp>
   </div>
 </template>
 
 <script>
 import basketComp from '@/components/basketComp'
+import FooterComp from '@/components/FooterComp.vue'
 
 ////images
 import logo from '@/assets/images/logo.png'
 
 export default {
   components:{
-    basketComp
+    basketComp,
+    FooterComp
   },
   data() {
     return{

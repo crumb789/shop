@@ -1,6 +1,6 @@
 <template>
     <div class="btn_wrapper">
-        <button @click="this.$router.go(-1)"  class="button is-success is-light ">Back</button>
+        <button @click="this.$router.go(-1)"  class="button is-warning is-light ">Back</button>
     </div>
 </template>
 

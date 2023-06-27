@@ -47,4 +47,19 @@ export default {
         }  
     }  
 }
+@media(max-width: 767px){
+    .basket{
+        &-continue{
+            margin-right: 100px;
+        }  
+    }  
+}
+
+@media(max-width: 424px){
+    .basket{
+        &-continue{
+            margin-right: 20px;
+        }  
+    }  
+}
 </style>
