@@ -3,8 +3,11 @@
     <div class="basket">
         <button-back class="basket-back animate__animated animate__backInLeft mb-4"></button-back>
         <div class="basket-box_wrapper">
-            <basket-item>
+            <basket-item >
             </basket-item>
+
+            <address-comp v-if="false">                
+            </address-comp>
         </div>
         
         <basket-continue v-if="basketEmpty">
@@ -19,12 +22,14 @@
 import BasketItem from '@/components/BasketItem.vue'
 import BasketContinue from '@/components/BasketContinue.vue'
 import ButtonBack from '@/components/UI/ButtonBack.vue'
+import AddressComp from '@/components/AddressComp.vue'
 
 export default {
   components: { 
         BasketItem,
         BasketContinue,
         ButtonBack,
+        AddressComp,
     },
     data() {
         return{

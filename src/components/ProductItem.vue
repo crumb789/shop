@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <button-back class="animate__animated animate__slideInLeft">
+        <button-back class="animate__animated animate__slideInLeft mt-4">
         </button-back>
 
     </div>
