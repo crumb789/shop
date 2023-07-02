@@ -11,6 +11,6 @@
 
 <style lang='scss'>
 .footer{
-    margin-top: 100px;
+    margin-top: 170px;
 }
 </style>

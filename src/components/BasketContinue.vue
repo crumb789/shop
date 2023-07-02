@@ -2,7 +2,10 @@
     <div class=" basket-continue animate__animated animate__backInRight">
         <p>You have {{ howProducts }} purchases</p>
         <p>To be paid: <strong>${{ sumInBasket }}</strong></p>
-        <button class="button is-success is-light">Сontinue shopping</button>
+        <div class="basket-continue__btns">
+            <button v-if="stageOrder > 1" @click="prevtStep" class="button is-warning is-light">Previous Step</button>
+            <button @click="nextStep" class="button is-success is-light">Сontinue shopping</button>
+        </div>
         <slot></slot>
     </div>
 </template>
@@ -15,12 +18,23 @@ export default {
 
         }
     },
+    methods:{
+        nextStep(){
+            this.$store.commit('nextOrderStep')
+        },
+        prevtStep(){
+            this.$store.commit('prevOrderStep')
+        }
+    },
     computed:{
         howProducts(){
             return this.$store.getters.quantityInCart
         },
         sumInBasket(){
             return this.$store.getters.priceInCart
+        },
+        stageOrder(){
+            return this.$store.state.orderStep
         },
     }
 }
@@ -32,6 +46,10 @@ export default {
         align-self: flex-start;
         p{
             text-align: right;
+        }
+        &__btns{
+            display: flex;
+            flex-direction: column;
         }
     }
     button{
