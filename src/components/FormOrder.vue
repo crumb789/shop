@@ -3,7 +3,7 @@
         <div class="field">
             <label class="label">Name</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Your Name">
+                <input class="input" type="text" placeholder="Your Name" required>
             </div>
             </div>
 

@@ -119,11 +119,20 @@ export default createStore({
       state.activeSort = newSort
       console.log(newSort)
     },
+
     nextOrderStep(state){
       (state.orderStep >= 3) ? state.orderStep = 3 : state.orderStep++
+      
     },
     prevOrderStep(state){
       (state.orderStep <= 1) ? state.orderStep = 1 : state.orderStep--
+    },
+
+    
+    clearBasketAll(state){
+      console.log('clear')
+      state.basketAll = [ ]
+      state.orderStep = 1
     }
   },
   actions: {

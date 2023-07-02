@@ -1,7 +1,7 @@
 <template>
         <h4 v-if="!basketEmpty" class="empty title is-4 animate__animated animate__slideInDown">Cart is empty</h4>
     <div class="basket">
-        <button-back class="basket-back animate__animated animate__backInLeft mb-4"></button-back>
+        <button-back @click="clearBasket" class="basket-back animate__animated animate__backInLeft mb-4"></button-back>
 
         <div class="basket-box_wrapper">
             <basket-item v-if="stageOrder === 1">
@@ -47,6 +47,13 @@ export default {
     methods:{
         newOrder(){
             this.$router.push('/')
+            this.$store.commit('clearBasketAll')
+        },
+        clearBasket(){
+            if(this.stageOrder > 2){
+                this.$store.commit('clearBasketAll')
+            }
+            else false
         }
     },
     computed:{
