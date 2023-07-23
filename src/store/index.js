@@ -69,6 +69,17 @@ export default createStore({
       let sum =  state.basketAll.reduce((sum, item) => sum + item.quantity  , 0);
       return sum
     },
+    sortItemsFake(state){
+      if(state.activeSort.id == 1 ){
+        return  state.itemsFake.sort( (a, b) => a.price - b.price );
+      }
+      if(state.activeSort.id == 2 ){
+        return  state.itemsFake.sort( (a, b) => b.price - a.price );
+      }
+      if( state.activeSort.id == 0){
+        return  state.itemsFake.sort( (a, b) => a.id - b.id );
+      }
+    }
   },
 
   mutations: {

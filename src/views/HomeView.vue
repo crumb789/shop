@@ -6,7 +6,7 @@
       </menu-comp>       
 
       <div class="items" v-if="itemsFake">
-        <items-sort>   
+        <items-sort>  
         </items-sort>
         <div class="items-wrapper" >
             <item-card v-for="item in itemsFake" :key="item.id" 
@@ -53,14 +53,14 @@ export default {
   },
   computed:{
     itemsFake(){
-      return this.$store.state.itemsFake
+      return this.$store.state.itemsFake      
     },
     howInCategoryAll(){
       return this.$store.getters.howInCategory
 
     },
-    sotring(){
-        return this.$store.state.activeSort
+    sorting(){
+      return this.$store.state.activeSort
     }
   },
   methods:{
