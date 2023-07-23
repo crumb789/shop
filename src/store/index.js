@@ -68,7 +68,7 @@ export default createStore({
     quantityInCart(state){
       let sum =  state.basketAll.reduce((sum, item) => sum + item.quantity  , 0);
       return sum
-    },
+    }, 
     sortItemsFake(state){
       if(state.activeSort.id == 1 ){
         return  state.itemsFake.sort( (a, b) => a.price - b.price );
